@@ -21,6 +21,7 @@
             android:value="@integer/google_play_services_version" />
         <activity
             android:name="fr.intechinfo.bitonic.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="fr.intechinfo.bitonic.countryDetails"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:label="@string/app_name" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAGDmsRzng4C9lFlc-KiH5Y8AVd8Sikf5c"/>
