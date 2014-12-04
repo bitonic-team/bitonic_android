@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     map:cameraZoom="5"
-    map:mapType="hybrid"
+    map:mapType="normal"
     map:cameraTargetLat="46.5277962"
     map:cameraTargetLng="2.6175824"
     android:name="com.google.android.gms.maps.MapFragment" />
