@@ -12,14 +12,25 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import fr.intechinfo.bitonic.model.Place;
 
 
 public class MainActivity extends Activity {
 
     private GoogleMap mMap;
     List<Marker> markers = new ArrayList<Marker>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +55,25 @@ public class MainActivity extends Activity {
         //.icon(BitmapDescriptorFactory.fromResource(R.drawable.car)));
     }
 
+    private void InitializePlaces(String service) throws IOException {
+        HttpGet httpget = new HttpGet(service);
+        ResponseHandler<String> responseHandler = new BasicResponseHandler();
+
+        String s = new DefaultHttpClient().execute(httpget, responseHandler);
+
+        try {
+            JSONObject jObj = new JSONObject(s);
+
+            Place p = new Place();
+            p.Id = jObj.getInt("_id");
+            p.Title = jObj.getString("name");
+          
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
