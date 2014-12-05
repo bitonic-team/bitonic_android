@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ff0f2238">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:height="40dp"
+        android:width="400dp"
+        android:gravity="center"
+        android:background="#ff3779c4"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:width="400dp"
+        android:height="140dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#ffffffff"
+        android:background="#ff0f2238"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_centerInParent="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="NIQUE TA MERE C&apos;EST LA FETE DES MERE"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:textSize="60sp"
-        android:gravity="center" />
-</LinearLayout>
+        android:id="@+id/organizations"
+        android:width="400dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#ffffffff"
+        android:height="200dp"
+        android:layout_above="@+id/donateBtn"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/donateBtn"
+        android:width="200dp"
+        android:gravity="center"
+        android:height="50dp"
+        android:text="@string/donateBtn"
+        android:background="#ff3779c4"
+        android:textColor="#ffffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp" />
+
+</RelativeLayout>
