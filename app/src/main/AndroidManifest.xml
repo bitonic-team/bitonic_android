@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="fr.intechinfo.bitonic.countryDetails"
+            android:name=".CountryDetails"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -53,7 +52,7 @@ public class MainActivity extends Activity {
             @Override
             public void onInfoWindowClick(Marker marker) {
 
-                Intent intent = new Intent(MainActivity.this, countryDetails.class);
+                Intent intent = new Intent(MainActivity.this, CountryDetails.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("country",places.get(marker.getTitle()));
                 intent.putExtras(bundle);
